@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блоки</title>
+    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-grid-3.0.min.css" type="text/css" media="all">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            overflow: hidden;
+            height: 100%;
+            min-height: 100vh;
+            width: 100vw;
+
+        }
+        body {
+            min-height: 100vh;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        main {
+            background-color: #1d2126;
+            color: #fff;
+
+            min-height: 100%;
+            width: 100%;
+
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        section.stub {
+            margin: 20px
+        }
+
+        section:not(.stub) {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+    </style>
+
+</head>
+<body>
+
+<main>
+    <section class="stub">
+        <div class="t-container t-align_left">
+            <div class="t-col t-col_12">
+                <h2 class="header ka-18-11 t-title t-title_xxl" field="title">В этих компаниях работают наши выпускники</h2>
+            </div>
+        </div>
+    </section>
+    <section class="block ka-18-11">
+        <div class="container ka-18-11">
+        <div class="t-container t-align_left">
+            <div class="t-col t-col_12">
+                <h2 class="header ka-18-11 t-title t-title_xxl" field="title">Как проходит обучение с оплатой после трудоустройства?</h2>
+            </div>
+        </div>
+        <div class="sizer ka-18-11">
+            <div class="steps adaptive_grid ka-18-11">
+                <div id="s1" class="step ka-18-11">
+                    <div class="step-number ka-18-11">
+                        1
+                    </div>
+                    <div class="step-text ka-18-11">
+                        <b>
+                            Ты выполняешь тестовое задание, проходишь собеседование для поступления и подписываешь договор.
+                        </b>
+                    </div>
+                </div>
+                <div id="s2" class="step ka-18-11">
+                    <div class="step-number ka-18-11">
+                        2
+                    </div>
+                    <div>
+                        Начинается обучение, ты <b>изучаешь материал по программе</b>, с тобой <b>на связи ментор</b>, он отвечает на твои вопросы и проверяет, как ты усвоил тему.
+                    </div>
+                </div>
+                <div id="s3" class="step ka-18-11">
+                    <div class="step-number ka-18-11">
+                        3
+                    </div>
+                    <div>
+                        <b>Проходишь практику в командном проекте,</b> чтобы закрепить все полученные навыки.
+                    </div>
+                </div>
+                <div id="s4" class="step ka-18-11">
+                    <div class="step-number ka-18-11">
+                        4
+                    </div>
+                    <div>
+                        <b>Начинается этап подготовки к трудоустройству,</b> с тобой проводятся тренировочные собеседования.
+                    </div>
+                </div>
+                <div id="s5" class="step ka-18-11">
+                    <div class="step-number ka-18-11">
+                        5
+                    </div>
+                    <div>
+                        Ты ищешь работу. Наш бот автоматически отправляет отклики на вакансии, ты получаешь приглашения и ходишь на интервью.
+                    </div>
+                </div>
+                <div id="s6" class="step highlighted ka-18-11">
+                    <div class="step-number ka-18-11">
+                        6
+                    </div>
+                    <div>
+                        Выбираешь лучший оффер и устраиваешься на работу.
+                    </div>
+                </div>
+                <div id="s7" class="step ka-18-11">
+                    <div class="step-number ka-18-11">
+                        7
+                    </div>
+                    <div>
+                        <b>Получаешь первую зарплату и только на этом шаге начинаешь платить за обучение: 17% от зарплаты (после вычета НДФЛ) в течение 24 месяцев.</b>
+                    </div>
+                </div>
+            </div>
+            <div class="bullets ka-18-11">
+                <a class="bullet ka-18-11" href="#s1"></a>
+                <a class="bullet ka-18-11" href="#s2"></a>
+                <a class="bullet ka-18-11" href="#s3"></a>
+                <a class="bullet ka-18-11" href="#s4"></a>
+                <a class="bullet ka-18-11" href="#s5"></a>
+                <a class="bullet ka-18-11" href="#s6"></a>
+                <a class="bullet ka-18-11" href="#s7"></a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="stub">
+        <div class="t-container t-align_left">
+            <div class="t-col t-col_12">
+                <h2 class="header ka-18-11 t-title t-title_xxl" field="title">Блок с видео</h2>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

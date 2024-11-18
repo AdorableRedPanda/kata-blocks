@@ -1,0 +1,18 @@
+{
+  "name": "kata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:biome": "biome format --write ./src && biome lint --write ./src",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "5.4.11",
+    "@biomejs/biome": "1.9.4"
+  }
+}

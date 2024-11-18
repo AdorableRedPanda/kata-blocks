@@ -1,0 +1,238 @@
+.block.ka-18-11 {
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	font-family: 'SFProDisplay', 'SF Pro Display', sans-serif;
+
+	@media screen and (max-width: 480px) {
+		padding: 20px 0;
+	}
+
+	* {
+
+		box-sizing: border-box;
+	}
+}
+
+.block.ka-18-11 {
+	--background-color: #ffffff;
+	--text-color: #000000;
+	--highlight-background: #b5e755;
+}
+
+.container.ka-18-11 {
+	max-width: 1160px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+
+.header.ka-18-11 {
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 1.2;
+
+	@media screen and (max-width: 480px), (orientation: landscape) and (max-height: 480px) {
+		font-size: 20px;
+	}
+}
+
+
+.sizer.ka-18-11 {
+	@media (max-width: 479px) {
+		width: 100vw;
+		overflow: auto;
+	}
+
+	scroll-behavior: smooth;
+	overflow: hidden;
+}
+
+.sizer.ka-18-11::-webkit-scrollbar {
+	display: none;
+}
+
+.adaptive_grid.ka-18-11{
+	display: grid;
+	gap: 20px;
+
+	.bullets.ka-18-11 {
+		display: none;
+	}
+
+	@media (max-width: 479px) {
+		display: flex;
+		gap: 20px;
+		overflow: auto;
+		flex-wrap: nowrap;
+
+		width: max-content;
+
+		padding: 0 10px;
+
+		.bullets.ka-18-11 {
+			display: flex;
+		}
+	}
+
+	@media (min-width: 480px) and (max-width: 639px) {
+		grid-template-areas:
+			"step1 step2"
+			"step3 step4"
+			"step5 step6"
+			"step7 step7";
+	}
+	@media (min-width: 640px) and (max-width: 959px) {
+		grid-template-areas:
+			"step1 step2"
+			"step3 step4"
+			"step5 step6"
+			"step7 step7";
+	}
+
+	@media (min-width: 960px) and (max-width: 1199px) {
+		grid-template-areas:
+			"step1 step1 step1 step2 step2 step2 step3 step3 step3 step4 step4 step4"
+			"step5 step5 step5 step5 step6 step6 step6 step6 step7 step7 step7 step7";
+	}
+
+	@media (min-width: 1200px) {
+		grid-template-areas:
+			"step1 step1 step1 step2 step2 step2 step3 step3 step3 step4 step4 step4"
+			"step5 step5 step5 step5 step6 step6 step6 step6 step7 step7 step7 step7";
+	}
+}
+
+.steps.ka-18-11 {
+
+	.step.ka-18-11:nth-child(1) {
+		grid-area: step1;
+	}
+	.step.ka-18-11:nth-child(2) {
+		grid-area: step2;
+	}
+	.step.ka-18-11:nth-child(3) {
+		grid-area: step3;
+	}
+	.step.ka-18-11:nth-child(4) {
+		grid-area: step4;
+	}
+	.step.ka-18-11:nth-child(5) {
+		grid-area: step5;
+	}
+	.step.ka-18-11:nth-child(6) {
+		grid-area: step6;
+	}
+	.step.ka-18-11:nth-child(7) {
+		grid-area: step7;
+	}
+}
+
+.steps.ka-18-11 {
+	margin: 50px 0;
+	--step-rotation: 0;
+
+	position: relative;
+
+	@media screen and (max-width: 959px) {
+		margin: 25px 0;
+	}
+
+	@media screen and (min-width: 1200px) {
+		--step-rotation: 357deg;
+	}
+}
+
+.step.ka-18-11 {
+	background-color: #222;
+	border-radius: 20px;
+	padding: 20px;
+	line-height: 1.5;
+	position: relative;
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+
+	--step-number-background: #b5e755;
+}
+
+.step.ka-18-11 {
+	background: var(--background-color);
+	color: var(--text-color);
+
+	transform: rotate(0);
+}
+
+
+.step.ka-18-11 {
+	@media (max-width: 479px) {
+		width: 290px;
+	}
+}
+
+
+.step.highlighted.ka-18-11 {
+	--step-number-background: var(--background-color);
+
+	background: var(--highlight-background);
+	transform: rotate(var(--step-rotation));
+}
+
+.step-number.ka-18-11 {
+	height: 45px;
+	width: 45px;
+	line-height: 43px;
+	font-size: 28px;
+
+	border-radius: 10px;
+	text-align: center;
+
+	color: black;
+	font-weight: 700;
+
+	background: var(--step-number-background);
+	transform: rotate(var(--step-rotation));
+
+	margin-bottom: 10px;
+}
+
+.bullets.ka-18-11 {
+	display: flex;
+	gap: 8px;
+	margin: auto;
+
+	width: fit-content;
+
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.bullet.ka-18-11 {
+	display: block;
+	height: 8px;
+	width: 8px;
+
+	border-radius: 50%;
+
+	opacity: 50%;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 70%;
+	}
+
+	background: #ffffff;
+}
+
+.steps.ka-18-11:has(#s1:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(1),
+.steps.ka-18-11:has(#s2:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(2),
+.steps.ka-18-11:has(#s3:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(3),
+.steps.ka-18-11:has(#s4:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(4),
+.steps.ka-18-11:has(#s5:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(5),
+.steps.ka-18-11:has(#s6:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(6),
+.steps.ka-18-11:has(#s7:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(7) {
+	opacity: 1;
+}

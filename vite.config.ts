@@ -1,0 +1,13 @@
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '',
+  build: {
+    outDir: '../dist',
+  },
+  root: './src/',
+  server: {
+    open: true,
+    port: 8080
+  }
+});
