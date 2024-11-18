@@ -46,10 +46,6 @@
             margin: 20px
         }
 
-        section:not(.stub) {
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
     </style>
 
 </head>
@@ -65,11 +61,11 @@
     </section>
     <section class="block ka-18-11">
         <div class="container ka-18-11">
-        <div class="t-container t-align_left">
-            <div class="t-col t-col_12">
-                <h2 class="header ka-18-11 t-title t-title_xxl" field="title">Как проходит обучение с оплатой после трудоустройства?</h2>
+            <div class="t-container t-align_left">
+                <div class="t-col t-col_12">
+                    <h2 class="header ka-18-11 t-title t-title_xxl" field="title">Как проходит обучение с оплатой после трудоустройства?</h2>
+                </div>
             </div>
-        </div>
         <div class="sizer ka-18-11">
             <div class="steps adaptive_grid ka-18-11">
                 <div id="s1" class="step ka-18-11">
@@ -131,17 +127,30 @@
                     </div>
                 </div>
             </div>
-            <div class="bullets ka-18-11">
-                <a class="bullet ka-18-11" href="#s1"></a>
-                <a class="bullet ka-18-11" href="#s2"></a>
-                <a class="bullet ka-18-11" href="#s3"></a>
-                <a class="bullet ka-18-11" href="#s4"></a>
-                <a class="bullet ka-18-11" href="#s5"></a>
-                <a class="bullet ka-18-11" href="#s6"></a>
-                <a class="bullet ka-18-11" href="#s7"></a>
+            <div class="buttons-wrapper ka-18-11">
+                <div class="buttons ka-18-11">
+                    <button id="arrow-back" class="button ka-18-11 arrow-back">
+                        <img class="arrow-icon ka-18-11" data-original="https://static.tildacdn.com/tild3533-3864-4362-b934-333862383036/arrow.svg" alt="" imgfield="tn_img_1724779057581" src="https://static.tildacdn.com/tild3533-3864-4362-b934-333862383036/arrow.svg">
+                    </button>
+                    <button id="arrow-forward" class="button ka-18-11">
+                        <img class="arrow-icon ka-18-11" data-original="https://static.tildacdn.com/tild3533-3864-4362-b934-333862383036/arrow.svg" alt="" imgfield="tn_img_1724779057581" src="https://static.tildacdn.com/tild3533-3864-4362-b934-333862383036/arrow.svg">
+                    </button>
+                </div>
             </div>
         </div>
         </div>
+        <script>
+            const back = document.getElementById('arrow-back');
+            const forward = document.getElementById('arrow-forward');
+            const sizer = document.querySelectorAll('.sizer').item(0);
+
+            back.addEventListener('click', () => {
+                sizer.scrollBy(-290, 0);
+            });
+            forward.addEventListener('click', () => {
+                sizer.scrollBy(290, 0);
+            });
+        </script>
     </section>
     <section class="stub">
         <div class="t-container t-align_left">

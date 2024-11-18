@@ -1,8 +1,8 @@
 .block.ka-18-11 {
 	width: 100%;
-	padding: 20px;
 	box-sizing: border-box;
 	font-family: 'SFProDisplay', 'SF Pro Display', sans-serif;
+	position: relative;
 
 	@media screen and (max-width: 480px) {
 		padding: 20px 0;
@@ -21,9 +21,11 @@
 }
 
 .container.ka-18-11 {
-	max-width: 1160px;
+	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
+
+	padding: 0 20px;
 }
 
 
@@ -34,9 +36,23 @@
 	font-size: 40px;
 	line-height: 1.2;
 
-	@media screen and (max-width: 480px), (orientation: landscape) and (max-height: 480px) {
+	@media screen and (max-width: 480px) and (min-width: 320px) {
 		font-size: 20px;
 	}
+
+	@media screen and (max-width: 640px) and (min-width: 480px)  {
+		font-size: 36px;
+	}
+
+	@media screen and (max-width: 960px) and (min-width: 640px)  {
+		font-size: 40px;
+	}
+
+	@media screen and (max-width: 1200px) and (min-width: 960px)  {
+		font-size: 36px;
+	}
+
+
 }
 
 
@@ -58,7 +74,7 @@
 	display: grid;
 	gap: 20px;
 
-	@media (max-width: 479px) {
+	@media (max-width: 480px) {
 		display: flex;
 		gap: 20px;
 		overflow: auto;
@@ -69,7 +85,7 @@
 		padding: 0 10px;
 	}
 
-	@media (min-width: 480px) and (max-width: 639px) {
+	@media (min-width: 479px) and (max-width: 639px) {
 		grid-template-areas:
 			"step1 step2"
 			"step3 step4"
@@ -85,12 +101,15 @@
 	}
 
 	@media (min-width: 960px) and (max-width: 1199px) {
+		grid-template-columns: repeat(12, 1fr);
+
 		grid-template-areas:
 			"step1 step1 step1 step2 step2 step2 step3 step3 step3 step4 step4 step4"
 			"step5 step5 step5 step5 step6 step6 step6 step6 step7 step7 step7 step7";
 	}
 
 	@media (min-width: 1200px) {
+		grid-template-columns: repeat(12, 1fr);
 		grid-template-areas:
 			"step1 step1 step1 step2 step2 step2 step3 step3 step3 step4 step4 step4"
 			"step5 step5 step5 step5 step6 step6 step6 step6 step7 step7 step7 step7";
@@ -148,6 +167,7 @@
 	height: 100%;
 
 	--step-number-background: #b5e755;
+	pointer-events: auto;
 }
 
 .step.ka-18-11 {
@@ -159,8 +179,8 @@
 
 
 .step.ka-18-11 {
-	@media (max-width: 479px) {
-		width: 290px;
+	@media (max-width: 480px) {
+		width: calc(100vmin - 30px);
 	}
 }
 
@@ -187,49 +207,43 @@
 	background: var(--step-number-background);
 	transform: rotate(var(--step-rotation));
 
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
-.bullets.ka-18-11 {
+.button.ka-18-11.arrow-back {
+	transform: scaleX(-1);
+}
 
-	@media (max-width: 479px) {
-		display: flex;
-	}
+.buttons.ka-18-11 {
+	display: flex;
+	gap: 20px;
 
-	display: none;
-	gap: 8px;
-	margin: auto;
-
-	width: fit-content;
+	width: 100%;
+	justify-content: flex-end;
+	right: 30px;
+	bottom: 0;
 
 	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
 }
 
-.bullet.ka-18-11 {
+.button.ka-18-11 {
+	outline: none;
+	background: none;
+	border: none;
+	cursor: pointer;
 	display: block;
-	height: 8px;
-	width: 8px;
-
-	border-radius: 50%;
-
-	opacity: 50%;
-
-	&:hover {
-		cursor: pointer;
-		opacity: 70%;
-	}
-
-	background: #ffffff;
+	height: 25px;
+	width: 25px;
 }
 
-.steps.ka-18-11:has(#s1:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(1),
-.steps.ka-18-11:has(#s2:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(2),
-.steps.ka-18-11:has(#s3:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(3),
-.steps.ka-18-11:has(#s4:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(4),
-.steps.ka-18-11:has(#s5:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(5),
-.steps.ka-18-11:has(#s6:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(6),
-.steps.ka-18-11:has(#s7:target) + .bullets.ka-18-11 >.bullet.ka-18-11:nth-child(7) {
-	opacity: 1;
+.arrow-icon.ka-18-11 {
+	height: 33px;
+	width: 33px;
+}
+
+.buttons-wrapper {
+	display: none;
+	@media (max-width: 480px) {
+		display: block;
+	}
 }
