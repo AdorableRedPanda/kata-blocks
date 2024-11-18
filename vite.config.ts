@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-
+import { ViteMinifyPlugin } from 'vite-plugin-minify'
 export default defineConfig({
   base: '',
   build: {
@@ -9,5 +9,6 @@ export default defineConfig({
   server: {
     open: true,
     port: 8080
-  }
+  },
+  plugins:[ViteMinifyPlugin()]
 });

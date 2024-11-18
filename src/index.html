@@ -6,8 +6,6 @@
     <title>Блоки</title>
     <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-grid-3.0.min.css" type="text/css" media="all">
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-
     <style>
         * {
             margin: 0;
@@ -52,13 +50,263 @@
 <body>
 
 <main>
-    <section class="stub">
-        <div class="t-container t-align_left">
-            <div class="t-col t-col_12">
-                <h2 class="header ka-18-11 t-title t-title_xxl" field="title">В этих компаниях работают наши выпускники</h2>
-            </div>
-        </div>
-    </section>
+    <style>
+        .block.ka-18-11 {
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'SFProDisplay', 'SF Pro Display', sans-serif;
+            position: relative;
+
+            @media screen and (max-width: 480px) {
+                padding: 20px 0;
+            }
+
+            * {
+
+                box-sizing: border-box;
+            }
+        }
+
+        .block.ka-18-11 {
+            --background-color: #ffffff;
+            --text-color: #000000;
+            --highlight-background: #b5e755;
+        }
+
+        .container.ka-18-11 {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+
+            padding: 0 20px;
+
+            @media screen and (max-width: 480px) and (min-width: 320px) {
+                padding: 0;
+            }
+        }
+
+        .step-text.ka-18-11 {
+
+        }
+
+        .header.ka-18-11 {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 1.2;
+
+            @media screen and (max-width: 480px) and (min-width: 320px) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 640px) and (min-width: 480px)  {
+                font-size: 36px;
+            }
+
+            @media screen and (max-width: 960px) and (min-width: 640px)  {
+                font-size: 40px;
+            }
+
+            @media screen and (max-width: 1200px) and (min-width: 960px)  {
+                font-size: 36px;
+            }
+
+
+        }
+
+
+        .sizer.ka-18-11 {
+            @media (max-width: 479px) {
+                width: 100vw;
+                overflow: auto;
+            }
+
+            scroll-behavior: smooth;
+            overflow: hidden;
+        }
+
+        .sizer.ka-18-11::-webkit-scrollbar {
+            display: none;
+        }
+
+        .adaptive_grid.ka-18-11{
+            display: grid;
+            gap: 20px;
+
+            @media (max-width: 480px) {
+                display: flex;
+                gap: 20px;
+                overflow: auto;
+                flex-wrap: nowrap;
+
+                width: max-content;
+
+                padding: 0 10px;
+            }
+
+            @media (min-width: 479px) and (max-width: 639px) {
+                grid-template-areas:
+			"step1 step2"
+			"step3 step4"
+			"step5 step6"
+			"step7 step7";
+            }
+            @media (min-width: 640px) and (max-width: 959px) {
+                grid-template-areas:
+			"step1 step2"
+			"step3 step4"
+			"step5 step6"
+			"step7 step7";
+            }
+
+            @media (min-width: 960px) and (max-width: 1199px) {
+                grid-template-columns: repeat(12, 1fr);
+
+                grid-template-areas:
+			"step1 step1 step1 step2 step2 step2 step3 step3 step3 step4 step4 step4"
+			"step5 step5 step5 step5 step6 step6 step6 step6 step7 step7 step7 step7";
+            }
+
+            @media (min-width: 1200px) {
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-areas:
+			"step1 step1 step1 step2 step2 step2 step3 step3 step3 step4 step4 step4"
+			"step5 step5 step5 step5 step6 step6 step6 step6 step7 step7 step7 step7";
+            }
+        }
+
+        .steps.ka-18-11 {
+
+            .step.ka-18-11:nth-child(1) {
+                grid-area: step1;
+            }
+            .step.ka-18-11:nth-child(2) {
+                grid-area: step2;
+            }
+            .step.ka-18-11:nth-child(3) {
+                grid-area: step3;
+            }
+            .step.ka-18-11:nth-child(4) {
+                grid-area: step4;
+            }
+            .step.ka-18-11:nth-child(5) {
+                grid-area: step5;
+            }
+            .step.ka-18-11:nth-child(6) {
+                grid-area: step6;
+            }
+            .step.ka-18-11:nth-child(7) {
+                grid-area: step7;
+            }
+        }
+
+        .steps.ka-18-11 {
+            margin: 50px 0;
+            --step-rotation: 0;
+
+            position: relative;
+
+            @media screen and (max-width: 959px) {
+                margin: 25px 0;
+            }
+
+            @media screen and (min-width: 1200px) {
+                --step-rotation: 357deg;
+            }
+        }
+
+        .step.ka-18-11 {
+            background-color: #222;
+            border-radius: 20px;
+            padding: 20px;
+            line-height: 1.5;
+            position: relative;
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+
+            --step-number-background: #b5e755;
+            pointer-events: auto;
+        }
+
+        .step.ka-18-11 {
+            background: var(--background-color);
+            color: var(--text-color);
+
+            transform: rotate(0);
+        }
+
+
+        .step.ka-18-11 {
+            @media (max-width: 480px) {
+                width: calc(100vmin - 30px);
+            }
+        }
+
+
+        .step.highlighted.ka-18-11 {
+            --step-number-background: var(--background-color);
+
+            background: var(--highlight-background);
+            transform: rotate(var(--step-rotation));
+        }
+
+        .step-number.ka-18-11 {
+            height: 45px;
+            width: 45px;
+            line-height: 43px;
+            font-size: 28px;
+
+            border-radius: 10px;
+            text-align: center;
+
+            color: black;
+            font-weight: 700;
+
+            background: var(--step-number-background);
+            transform: rotate(var(--step-rotation));
+
+            margin-bottom: 20px;
+        }
+
+        .button.ka-18-11.arrow-back {
+            transform: scaleX(-1);
+        }
+
+        .buttons.ka-18-11 {
+            display: flex;
+            gap: 20px;
+
+            width: 100%;
+            justify-content: flex-end;
+            right: 30px;
+            bottom: 0;
+
+            position: absolute;
+        }
+
+        .button.ka-18-11 {
+            outline: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: block;
+            height: 25px;
+            width: 25px;
+        }
+
+        .arrow-icon.ka-18-11 {
+            height: 33px;
+            width: 33px;
+        }
+
+        .buttons-wrapper {
+            display: none;
+            @media (max-width: 480px) {
+                display: block;
+            }
+        }
+    </style>
     <section class="block ka-18-11">
         <div class="container ka-18-11">
             <div class="t-container t-align_left">
@@ -159,13 +407,6 @@
                 sizer.scrollBy(290, 0);
             });
         </script>
-    </section>
-    <section class="stub">
-        <div class="t-container t-align_left">
-            <div class="t-col t-col_12">
-                <h2 class="header ka-18-11 t-title t-title_xxl" field="title">Блок с видео</h2>
-            </div>
-        </div>
     </section>
 </main>
 </body>
