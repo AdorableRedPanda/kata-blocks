@@ -58,10 +58,6 @@
 	display: grid;
 	gap: 20px;
 
-	.bullets.ka-18-11 {
-		display: none;
-	}
-
 	@media (max-width: 479px) {
 		display: flex;
 		gap: 20px;
@@ -71,10 +67,6 @@
 		width: max-content;
 
 		padding: 0 10px;
-
-		.bullets.ka-18-11 {
-			display: flex;
-		}
 	}
 
 	@media (min-width: 480px) and (max-width: 639px) {
@@ -199,7 +191,12 @@
 }
 
 .bullets.ka-18-11 {
-	display: flex;
+
+	@media (max-width: 479px) {
+		display: flex;
+	}
+
+	display: none;
 	gap: 8px;
 	margin: auto;
 
